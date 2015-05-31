@@ -24,40 +24,46 @@ module.exports = function(grunt) {
     // ======
 
     copy: {
-      fancybox: {
+      fancybox_js: {
         files: [
           {
             expand: true,
-            cwd: 'node_modules/fancybox/dist/css/',
-            src: ['jquery.fancybox.css'],
-            dest: 'src/less/lib/',
-            rename: function(dest, src) {
-              return dest + src.replace(/\.css$/, ".less");
-            }
-          },
-          {
-            expand: true,
-            cwd: 'node_modules/fancybox/dist/img/',
-            src: ['*.*'],
-            dest: 'src/img/'
-          },
+            cwd: 'bower_components/fancybox/source/',
+            src: ['jquery.fancybox.js'],
+            dest: 'js/lib/fancybox/'
+          }
         ]
       },
-      respond: {
-        files: {
-          'dist/js/lib/respond.min.js': 'node_modules/respond.js/dest/respond.min.js'
-        }
-      },
-      picturefill: {
-        files: {
-          'dist/js/lib/picturefill.min.js': 'node_modules/picturefill/dist/picturefill.min.js'
-        }
-      },
-      fontfaceobserver: {
-        files: {
-          'dist/js/lib/fontfaceobserver.min.js': 'node_modules/fontfaceobserver/fontfaceobserver.standalone.js'
-        }
-      },
+      fancybox_css: {
+        files: [
+          {
+            expand: true,
+            cwd: 'bower_components/fancybox/source/',
+            src: ['jquery.fancybox.css'],
+            dest: 'less/lib/'
+          }
+        ]
+      }, 
+      fancybox_img: {
+        files: [
+          {
+            expand: true,
+            cwd: 'bower_components/fancybox/source/',
+            src: ['*.gif','*.png','*.css'],
+            dest: 'css/'
+          }
+        ]
+      },     
+      jquery: {
+        files: [
+          {
+            expand: true,
+            cwd: 'bower_components/jquery/dist/',
+            src: ['jquery.js'],
+            dest: 'js/lib/jquery/'
+          }
+        ]
+      }      
     },
 
     // CSS
@@ -69,24 +75,19 @@ module.exports = function(grunt) {
     less: {
       default: {
         files: {
-          'dist/css/style.css': 'src/less/index.less'
-        }
-      },
-      sourcemaps: {
-        files: {
-          'dist/css/style.css': 'src/less/index.less'
+          'css/index.css': 'less/index.less'
         },
         options: {
           sourceMap: true,
           // sourceMapFilename:
           // Pokud nastaveno, zapise se SM do
           // externiho souboru. Uvadi se zde cesta k nemu.
-          sourceMapFilename: 'dist/css/style.css.map',
+          sourceMapFilename: 'css/index.css.map',
           // sourceMapURL:
           // Prepise vychozi url pro soubor se SM,
           // tak jak se vola na konci zkompilovaneho CSS souboru.
           // Vychozi je obsah `sourceMapFilename`, tady jde prepsat.
-          sourceMapURL: 'style.css.map',
+          sourceMapURL: 'index.css.map',
           // sourceMapRootpath:
           // Cesta k LESS souborum jek budou volany ze souboru se SM.
           sourceMapRootpath: '/',
@@ -107,8 +108,8 @@ module.exports = function(grunt) {
         map: true // Updatni SourceMap
       },
       style: {
-          src: 'dist/css/style.css',
-          dest: 'dist/css/style.css'
+          src: 'css/index.css',
+          dest: 'css/index.css'
       }
     },
 
@@ -117,13 +118,13 @@ module.exports = function(grunt) {
     // ------
 
     // Minifikujeme inlinované CSSka.
-    // Nepoužíváme na style.css, protože odstraňuje SourceMapy. Ale bylo
+    // Nepoužíváme na index.css, protože odstraňuje SourceMapy. Ale bylo
     // by to efektivnější než minifikovat LESSem.
 
     cssmin: {
       css: {
         files: {
-          'dist/css/style.min.css': 'dist/css/style.css'
+          'css/index.min.css': 'css/index.css'
         }
       }
     },
@@ -135,13 +136,10 @@ module.exports = function(grunt) {
     // ---------------------
 
     uglify: {
-      script: {
-          src: 'dist/js/script.js',
-          dest: 'dist/js/script.min.js'
-      },
-      enhance: {
-          src: 'src/js/lib/enhance.js',
-          dest: 'dist/js/lib/enhance.min.js'
+      default: {
+        files: {
+          'js/script.min.js': ['js/lib/jquery/jquery.js', 'js/lib/fancybox/jquery.fancybox.js', 'js/index.js']
+        }
       }
     },
 
@@ -152,47 +150,20 @@ module.exports = function(grunt) {
     // --------------------------------------------
 
     imagemin: {
-      // Root
-      root: {
+      // TODO
+      default: {
         files: [{
           expand: true,
           cwd: 'src/img/',
           src: ['**/*.jpg','**/*.png','**/*.gif'],
           dest: 'dist/img/'
         }]
-      },
-      // Bitmapy v designu
-      bitmap: {
-        files: [{
-          expand: true,
-          cwd: 'src/img/bitmap/',
-          src: ['**/*.jpg','**/*.png','**/*.gif'],
-          dest: 'dist/img/bitmap/'
-        }]
-      },
-      // Obrazky v obsahu
-      content_img: {
-        files: [{
-          expand: true,
-          cwd: 'src/img/content/',
-          src: ['**/*.jpg','**/*.png','**/*.gif'],
-          dest: 'dist/img/content/'
-        }]
-      },
-      // Vektory
-      vector: {
-        files: [{
-          expand: true,
-          cwd: 'src/img/vector/',
-          src: ['**/*.svg'],
-          dest: 'dist/img/vector/'
-        }]
-      },
+      }
     },
 
     // SVG2PNG
     // -------
-    // Z SVG obrazku dela PNG kopie pro fallbacky.
+    // Z SVG obrazku dela PNG kopie pro fallbacky. TODO
 
     svg2png: {
       images: {
@@ -217,7 +188,7 @@ module.exports = function(grunt) {
       dev: {
           bsFiles: {
               src : [
-                'dist/css/*.css'
+                'css/*.css'
               ]
           },
           options: {
@@ -234,11 +205,11 @@ module.exports = function(grunt) {
 
     watch: {
       less: {
-        files: 'src/less/**/*.less',
+        files: 'less/**/*.less',
         tasks: ['css']
       },
       js: {
-        files: 'src/js/*.js',
+        files: 'js/**/*.js',
         tasks: ['js']
       }
     },
@@ -249,9 +220,9 @@ module.exports = function(grunt) {
   // 5) Alias tasky
   // ==============
 
-  grunt.registerTask('css', ['less:default', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('css', ['less', 'autoprefixer', 'cssmin']);
   grunt.registerTask('img', ['imagemin', 'svg2png']);
-  grunt.registerTask('js', ['browserify', 'uglify']);
-  grunt.registerTask('default', ['copy:fancybox', 'css', 'js', 'browserSync', 'watch']);
+  grunt.registerTask('js', ['uglify']);
+  grunt.registerTask('default', ['copy', 'css', 'js', 'browserSync', 'watch']);
 
 };
