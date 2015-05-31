@@ -1,0 +1,22 @@
+{
+  "name": "space-news",
+  "version": "0.0.0",
+  "homepage": "https://github.com/machal/polaroid-example",
+  "authors": [
+    "Martin Michalek <martin@vzhurudolu.cz.cz>"
+  ],
+  "description": "Demo priklad pro skoleni Dnesni webovy frontend.",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fancybox": "^3.0.0",
+    "jquery": "^1.11.2",    
+  }
+}

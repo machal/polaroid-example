@@ -1,0 +1,165 @@
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.dumb_only {
+  position: absolute;
+  top: -200px;
+  left: -200px;
+}
+a img {
+  border: 0;
+}
+body {
+  font: 15px/20px sans-serif;
+  background: #6d431f url('../img/wood.png') repeat;
+  color: #fff;
+  margin: 1em 1em 0 1em;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 0;
+}
+p {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #ccc;
+}
+table td,
+table th {
+  text-align: left;
+  font-weight: normal;
+  border-bottom: 1px solid #ccc;
+  padding: .5em .2em .5em 0;
+}
+table th {
+  color: #999;
+}
+.head {
+  padding: 2em 0;
+  text-align: center;
+}
+.foot {
+  padding: 2em 0;
+  text-align: center;
+  margin-bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  margin-left: -1em;
+  margin-right: -1em;
+}
+.form input[type=text],
+.form textarea {
+  width: 100%;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.infobox {
+  color: #000;
+  background: #fff;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+}
+.infobox h2 {
+  margin-top: 0;
+}
+.nav {
+  zoom: 1;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+}
+.nav:before,
+.nav:after {
+  content: "";
+  display: table;
+}
+.nav:after {
+  clear: both;
+}
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.nav_item {
+  margin: 0;
+  display: inline-block;
+}
+.nav_item a,
+.nav_item b {
+  font-weight: normal;
+  display: inline-block;
+  padding: .5em 1em;
+  text-align: center;
+  color: #333;
+  background: #fff;
+  text-decoration: none;
+}
+.nav_item b {
+  background: #ddd;
+  background: rgba(255, 255, 255, 0.5);
+}
+.polaroids {
+  zoom: 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.polaroids:before,
+.polaroids:after {
+  content: "";
+  display: table;
+}
+.polaroids:after {
+  clear: both;
+}
+.polaroid a {
+  color: #666;
+  text-decoration: none;
+}
+.polaroid-head {
+  text-align: center;
+  font: 15px/20px sans-serif;
+  font-weight: normal;
+}
+.polaroid {
+  float: left;
+  width: 170px;
+  height: 180px;
+  padding: 10px;
+  margin: 0 20px 20px 0;
+  background-color: white;
+  color: darkgrey;
+}
+.polaroid {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.polaroid:hover,
+.polaroid:focus,
+.polaroid:active {
+  background-color: #fcf883;
+  background-color: #ffffff;
+}
+.polaroid:target {
+  background: yellow;
+}
+.polaroid .polaroid:hover .head,
+.polaroid .polaroid:focus .head,
+.polaroid .polaroid:active .head {
+  color: black;
+}

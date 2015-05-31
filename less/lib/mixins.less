@@ -1,0 +1,14 @@
+// --- Mixiny --- 
+
+// Micro ClearFix Mixin
+.clearfix {
+  zoom:1;
+  &:before, &:after{ content:""; display:table; }
+  &:after { clear: both; }
+}
+
+.dumb_only {
+	position: absolute;
+	top: -200px;
+	left: -200px;	
+}
