@@ -97,37 +97,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // Autoprefixer
-    // ------------
-
-    // Automaticky pridava browser prefixy co vykompilovaneho CSS.
-
-    autoprefixer: {
-      options: {
-        browsers: ['last 3 versions', 'ios 6', 'ie 7', 'ie 8', 'ie 9'],
-        map: true // Updatni SourceMap
-      },
-      style: {
-          src: 'css/index.css',
-          dest: 'css/index.css'
-      }
-    },
-
-
-    // CSSmin
-    // ------
-
-    // Minifikujeme inlinované CSSka.
-    // Nepoužíváme na index.css, protože odstraňuje SourceMapy. Ale bylo
-    // by to efektivnější než minifikovat LESSem.
-
-    cssmin: {
-      css: {
-        files: {
-          'css/index.min.css': 'css/index.css'
-        }
-      }
-    },
 
     // Javascript
     // ==========
@@ -143,37 +112,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // 3) Obrazky
-    // ==========
-
-    // Imagemin: zmensovani datoveho objemu obrazku
-    // --------------------------------------------
-
-    imagemin: {
-      // TODO
-      default: {
-        files: [{
-          expand: true,
-          cwd: 'src/img/',
-          src: ['**/*.jpg','**/*.png','**/*.gif'],
-          dest: 'dist/img/'
-        }]
-      }
-    },
-
-    // SVG2PNG
-    // -------
-    // Z SVG obrazku dela PNG kopie pro fallbacky. TODO
-
-    svg2png: {
-      images: {
-        files: [
-            { cwd: 'dist/img/vector/', src: ['**/*.svg'] }
-        ]
-      }
-    },
-
-    // 4) browserSync a watch
+    // browserSync a watch
     // ======================
 
     // browserSync
@@ -220,7 +159,7 @@ module.exports = function(grunt) {
   // 5) Alias tasky
   // ==============
 
-  grunt.registerTask('css', ['less', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('css', ['less']);
   grunt.registerTask('img', ['imagemin', 'svg2png']);
   grunt.registerTask('js', ['uglify']);
   grunt.registerTask('default', ['copy', 'css', 'js', 'browserSync', 'watch']);
