@@ -45,25 +45,24 @@ Viz [Gruntfile.js](./Gruntfile.js).
 ## Instalace projektu
 
 ```bash
+# naklonování projektu
+git clone https://github.com/machal/polaroid-example.git
 # vývojářské závislosti
 npm install
 # uživatelské závislosti
 bower install
 # spuštění hlavního Grunt tasku
 grunt
-
 ```
-
 
 ## Zdroje fotek
 
 - http://www.flickr.com/photos/colloidfarl/148800272/sizes/m/in/photostream/  
-- http://www.flickr.com/photos/26907150@N08/7321463436/sizes/m/in/photostream/  
+- http://www.flickr.com/photos/26907150@N08/7321463436/sizes/m/in/photostream/
 - http://www.flickr.com/photos/byspice/4557787236/sizes/m/in/photostream/
 - http://www.flickr.com/photos/neilarmstrong2/5946195915/sizes/m/in/photostream/
 - http://www.flickr.com/photos/dcdead/5890591705/sizes/m/in/photostream/
 - http://www.flickr.com/photos/35311483@N06/3368553891/
-
 - http://farm1.staticflickr.com/55/148800272_86cffac801.jpg
 - http://farm8.staticflickr.com/7236/7321463436_a2e6e2608d.jpg
 - http://farm4.staticflickr.com/3101/4557787236_694b445bec.jpg
