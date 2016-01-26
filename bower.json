@@ -3,9 +3,9 @@
   "version": "0.5.0",
   "homepage": "https://github.com/machal/polaroid-example",
   "authors": [
-    "Martin Michalek <martin@vzhurudolu.cz.cz>"
+    "Martin Michalek <martin@vzhurudolu.cz>"
   ],
-  "description": "Demo priklad pro skoleni Dnesni webovy frontend.",
+  "description": "Demo priklad pro skoleni Dnesni webova koderina.",
   "main": "index.html",
   "license": "MIT",
   "ignore": [
@@ -17,6 +17,6 @@
   ],
   "dependencies": {
     "fancybox": "^2.0.0",
-    "jquery": "^1.11.2"   
+    "jquery": "^1.11.2"  
   }
 }

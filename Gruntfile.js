@@ -1,7 +1,13 @@
 /*
 
-Ukoly nad assety: kombilace CSS, JS, zmensovani IMG…
-=====================================================
+Ukoly nad assety
+================
+
+1) Kopirovani souboru
+2) CSS: LESS, PostCSS
+3) JS: minifikace
+4) Workflow: BrowserSync, watch
+5) Alias tasky: css, js, default
 
 */
 
@@ -20,8 +26,8 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
-    // Rename
-    // ======
+    // 1) Kopirovani souboru
+    // ---------------------
 
     copy: {
       fancybox_js: {
@@ -67,10 +73,9 @@ module.exports = function(grunt) {
     },
 
     // CSS
-    // ===
+    // ---
 
     // LESS kompilace
-    // --------------
 
     less: {
       default: {
@@ -99,10 +104,9 @@ module.exports = function(grunt) {
 
 
     // Javascript
-    // ==========
+    // ----------
 
     // Uglify: minifikace JS
-    // ---------------------
 
     uglify: {
       default: {
@@ -112,11 +116,10 @@ module.exports = function(grunt) {
       }
     },
 
-    // browserSync a watch
-    // ======================
+    // Workflow
+    // --------
 
     // browserSync
-    // -----------
 
     // Spusti server na http://localhost:3000/, externe pak na
     // adrese, kterou zobrazi pri startu.
@@ -157,10 +160,9 @@ module.exports = function(grunt) {
 
 
   // 5) Alias tasky
-  // ==============
+  // --------------
 
   grunt.registerTask('css', ['less']);
-  grunt.registerTask('img', ['imagemin', 'svg2png']);
   grunt.registerTask('js', ['uglify']);
   grunt.registerTask('default', ['copy', 'css', 'js', 'browserSync', 'watch']);
 
