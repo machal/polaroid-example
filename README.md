@@ -23,15 +23,11 @@ Kompilujeme pomocí Grunt.js do `css/index.css`.
 
 ### Vývojářské závislosti – npm
 
-Vývojářské závislosti (Grunt a pluginy) spravujeme pomocí https://www.npmjs.com/.
-
-Viz [package.json](./package.json).
+Vývojářské závislosti ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](http://www.vzhurudolu.cz/prirucka/grunt-pluginy), které pomáhají vývojáři) spravujeme pomocí https://www.npmjs.com/. Viz konfigurák [package.json](./package.json).
 
 ### Uživatelské závislosti - Bower
 
-Uživatelské závislosti (jQuery a pluginy) spravujeme pomocí https://www.bower.io/.
-
-Viz [bower.json](./bower.json).
+Uživatelské závislosti (jQuery a pluginy, které potřebuje uživatel webu) spravujeme pomocí [Boweru](http://www.vzhurudolu.cz/prirucka/bower). Viz konfigurák [bower.json](./bower.json).
 
 ## Sestavování pomocí Grunt.js
 
@@ -43,6 +39,10 @@ Důležité tásky:
 Viz [Gruntfile.js](./Gruntfile.js).
 
 ## Instalace projektu
+
+Nejprve si musíte nainstalovat [NPM a celý Node.js ekosystém](http://www.vzhurudolu.cz/prirucka/node-instalace).
+
+Pak tento konkrétní projekt:
 
 ```bash
 # naklonování projektu
