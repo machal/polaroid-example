@@ -1,18 +1,25 @@
-// --- Komponenta Polaroid ---
+// Komponenta Polaroid
+// ===================
+
+// Seznam fotek a jednotlive fotky
 
 
-// - Seznam fotek -
+// Seznam
+// ------
+
 .polaroids {
 	.clearfix;
-  	list-style-type: none;
-  	margin: 0;
-  	padding: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 
-// - Jednotliva fotka -
+// Fotka
+// -----
 
-// Base
+// ### Zakladna
+
 .polaroid {
 	a {
 	  color: #666;
@@ -26,10 +33,11 @@
   font-weight: normal;
 }
 
-// Layout
+// ### Layout
+
 .polaroid {
 	float: left;
-	width: 170px; 
+	width: 170px;
 	height: 180px;
 	padding: 10px;
 	margin: 0 20px 20px 0;
@@ -37,24 +45,23 @@
 	color: darkgrey;
 }
 
-// Stavy
+// ### Stavy
+
 .polaroid {
 	background-color: rgba(100%, 100%, 100%, .7);
-	
+
 	&:hover,
 	&:focus,
 	&:active {
-	  	background-color: #fcf883;
-		background-color: rgba(100%, 100%, 100%, 1);	
-	}
-	
-	&:target {
-		background: yellow;
+	  background-color: #fcf883;
+		background-color: rgba(100%, 100%, 100%, 1);
+
+    .head {
+      color: black;
+    }
 	}
 
-	.polaroid:hover .head,
-	.polaroid:focus .head,
-	.polaroid:active .head {
-	  color: black;
+	&:target {
+		background: yellow;
 	}
 }
