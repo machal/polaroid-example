@@ -9,6 +9,11 @@ Ukoly nad assety
 4) Workflow: BrowserSync, watch
 5) Alias tasky: css, js, default
 
+TODO:
+- v Chrome nefunguji source maps po zapojeni BrowserSync
+  (Firefox je v pohode v obou situacich)
+  https://github.com/BrowserSync/browser-sync/issues/639
+
 */
 
 module.exports = function(grunt) {
@@ -51,7 +56,7 @@ module.exports = function(grunt) {
             dest: 'less/lib/'
           }
         ]
-      }, 
+      },
       fancybox_img: {
         files: [
           {
@@ -61,7 +66,7 @@ module.exports = function(grunt) {
             dest: 'css/'
           }
         ]
-      },     
+      },
       jquery: {
         files: [
           {
@@ -71,7 +76,7 @@ module.exports = function(grunt) {
             dest: 'js/lib/jquery/'
           }
         ]
-      }      
+      }
     },
 
     // CSS
@@ -88,7 +93,7 @@ module.exports = function(grunt) {
           sourceMap: true,
           sourceMapFilename: 'css/index.css.map',
           sourceMapURL: 'index.css.map',
-          sourceMapRootpath: './'          
+          sourceMapRootpath: './'
         }
       }
     },
@@ -97,7 +102,7 @@ module.exports = function(grunt) {
 
     postcss: {
       options: {
-        map: true, 
+        map: true,
         processors: [
           require('pixrem')({rootValue: 16}), // rem -> px fallback
           require('autoprefixer')({browsers: 'last 2 versions'}), // pridani prefixu
@@ -106,7 +111,7 @@ module.exports = function(grunt) {
       dist: {
         src: 'css/index.css'
       }
-    },    
+    },
 
 
     // Javascript
@@ -117,7 +122,11 @@ module.exports = function(grunt) {
     uglify: {
       default: {
         files: {
-          'js/script.min.js': ['js/lib/jquery/jquery.js', 'js/lib/fancybox/jquery.fancybox.js', 'js/index.js']
+          'js/script.min.js': [
+            'js/lib/jquery/jquery.js',
+            'js/lib/fancybox/jquery.fancybox.js',
+            'js/index.js'
+          ]
         }
       }
     },
@@ -141,7 +150,7 @@ module.exports = function(grunt) {
           },
           options: {
               watchTask: true,
-              proxy: 'sites.localhost'
+              proxy: 'sites.localhost/_skoleni/2016_01_28_koderina'
           }
       }
     },
