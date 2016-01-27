@@ -18,7 +18,9 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   // jit-grunt pro zrychleni nacitani gruntu a behu tasku
-  require('jit-grunt')(grunt);
+  require('jit-grunt')(grunt, {
+    pixrem: 'pixrem'
+  });
 
 
   // Nastaveni tasku
@@ -75,7 +77,7 @@ module.exports = function(grunt) {
     // CSS
     // ---
 
-    // LESS kompilace
+    // LESS -> CSS
 
     less: {
       default: {
@@ -84,23 +86,27 @@ module.exports = function(grunt) {
         },
         options: {
           sourceMap: true,
-          // sourceMapFilename:
-          // Pokud nastaveno, zapise se SM do
-          // externiho souboru. Uvadi se zde cesta k nemu.
           sourceMapFilename: 'css/index.css.map',
-          // sourceMapURL:
-          // Prepise vychozi url pro soubor se SM,
-          // tak jak se vola na konci zkompilovaneho CSS souboru.
-          // Vychozi je obsah `sourceMapFilename`, tady jde prepsat.
           sourceMapURL: 'index.css.map',
-          // sourceMapRootpath:
-          // Cesta k LESS souborum jek budou volany ze souboru se SM.
-          sourceMapRootpath: '/',
-          // Komprimovat timto? contrib-css odstranoval sourcemapy
-          //compress: true,
+          sourceMapRootpath: './'          
         }
       }
     },
+
+    // PostCSS
+
+    postcss: {
+      options: {
+        map: true, 
+        processors: [
+          require('pixrem')({rootValue: 16}), // rem -> px fallback
+          require('autoprefixer')({browsers: 'last 2 versions'}), // pridani prefixu
+        ]
+      },
+      dist: {
+        src: 'css/index.css'
+      }
+    },    
 
 
     // Javascript
@@ -135,7 +141,7 @@ module.exports = function(grunt) {
           },
           options: {
               watchTask: true,
-              proxy: 'localhost'
+              proxy: 'sites.localhost'
           }
       }
     },
@@ -162,7 +168,7 @@ module.exports = function(grunt) {
   // 5) Alias tasky
   // --------------
 
-  grunt.registerTask('css', ['less']);
+  grunt.registerTask('css', ['less', 'postcss']);
   grunt.registerTask('js', ['uglify']);
   grunt.registerTask('default', ['copy', 'css', 'js', 'browserSync', 'watch']);
 
