@@ -150,7 +150,7 @@ module.exports = function(grunt) {
           },
           options: {
               watchTask: true,
-              proxy: 'sites.localhost/_skoleni/2016_01_28_koderina'
+              proxy: 'sites.localhost'
           }
       }
     },
