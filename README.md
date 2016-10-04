@@ -4,14 +4,16 @@ http://www.vzhurudolu.cz/kurzy/webovy-frontend
 
 **Autor:** Martin Michálek, martin@vzhurudolu.cz
 
+
 ## Struktura stylů
 
 * `src/less/index.less` – index stylů
-* `src/less/ui/` – pokročilejší komponenty uživatelského rozhraní
-* `src/less/lib/` – knihovny
-* `src/less/core/` – vše ostatní
+* `src/less/core/` – základy pro CSS: mixiny, pomocné třídy…
+* `src/less/ui/` –  komponenty uživatelského rozhraní
+* `src/less/layout/` –  rozložení stránky
 
 Kompilujeme pomocí Grunt.js do `css/index.css`.
+
 
 ## Javascript
 
@@ -19,15 +21,10 @@ Kompilujeme pomocí Grunt.js do `css/index.css`.
 * `js/script.min.js` – výsledný Grunt.js kompilát
 
 
-## Závislosti 
+## Závislosti řešíme pomocí NPM
 
-### Vývojářské závislosti – npm
+Vývojářské ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](http://www.vzhurudolu.cz/prirucka/grunt-pluginy) i uživatelské závislosti (jQuery a jeho pluginy) spravujeme pomocí https://www.npmjs.com/. Viz konfigurák [package.json](./package.json).
 
-Vývojářské závislosti ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](http://www.vzhurudolu.cz/prirucka/grunt-pluginy), které pomáhají vývojáři) spravujeme pomocí https://www.npmjs.com/. Viz konfigurák [package.json](./package.json).
-
-### Uživatelské závislosti - Bower
-
-Uživatelské závislosti (jQuery a pluginy, které potřebuje uživatel webu) spravujeme pomocí [Boweru](http://www.vzhurudolu.cz/prirucka/bower). Viz konfigurák [bower.json](./bower.json).
 
 ## Sestavování pomocí Grunt.js
 
@@ -47,17 +44,17 @@ Pak tento konkrétní projekt:
 ```bash
 # naklonování projektu
 git clone https://github.com/machal/polaroid-example.git
-# vývojářské závislosti
+
+# instalace závislostí
 npm install
-# uživatelské závislosti
-bower install
+
 # spuštění hlavního Grunt tasku
 grunt
 ```
 
 ## Zdroje fotek
 
-- http://www.flickr.com/photos/colloidfarl/148800272/sizes/m/in/photostream/  
+- http://www.flickr.com/photos/colloidfarl/148800272/sizes/m/in/photostream/
 - http://www.flickr.com/photos/26907150@N08/7321463436/sizes/m/in/photostream/
 - http://www.flickr.com/photos/byspice/4557787236/sizes/m/in/photostream/
 - http://www.flickr.com/photos/neilarmstrong2/5946195915/sizes/m/in/photostream/
