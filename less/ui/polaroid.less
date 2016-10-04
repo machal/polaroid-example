@@ -1,11 +1,11 @@
-// Komponenta Polaroid
-// ===================
+/*
+UI komponenta: Polaroid fotka
+=============================
+*/
 
-// Seznam fotek a jednotlive fotky
 
-
-// Seznam
-// ------
+// Seznam fotek
+// ------------
 
 .polaroids {
 	.clearfix;
@@ -21,47 +21,49 @@
 // ### Zakladna
 
 .polaroid {
+  float: left;
+  width: 25%;
+  height: 180px;
+  padding: 10px 2.5%;
+  margin: 0 2.5% 20px 0;
+  background-color: white;
+  color: darkgrey;
+
 	a {
 	  color: #666;
 	  text-decoration: none;
 	}
 }
 
-.polaroid-head {
+// ### Stav: aktivni
+
+.polaroid {
+  &:hover,
+  &:focus,
+  &:active,
+  &--active {
+    background-color: #fcf883;
+    background-color: rgba(100%, 100%, 100%, 1);
+
+    .polaroid__head {
+      color: black;
+    }
+  }
+}
+
+// ### Stav: vybrany v url
+
+.polaroid {
+  &:target {
+    background: yellow;
+  }
+}
+
+// Blok: hlavicka
+
+.polaroid__head {
   text-align: center;
   font: 1rem/1.33 sans-serif;
   font-weight: normal;
 }
 
-// ### Layout
-
-.polaroid {
-	float: left;
-	width: 170px;
-	height: 180px;
-	padding: 10px;
-	margin: 0 20px 20px 0;
-	background-color: white;
-	color: darkgrey;
-}
-
-// ### Stavy
-
-.polaroid {
-	background-color: rgba(100%, 100%, 100%, .7);
-
-	&:hover,
-	&:focus,
-	&:active {
-	  background-color: #fcf883;
-		background-color: rgba(100%, 100%, 100%, 1);
-
-    .head {
-      color: black;
-    }
-	}
-
-	&:target {
-		background: yellow;
-	}
-}

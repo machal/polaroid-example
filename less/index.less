@@ -1,17 +1,32 @@
-// --- Fotogalerie: hlavni rozcestnik ---
+
+// Zakladna
+// --------
+
+@import 'core/base';
+@import 'core/helpers';
+@import 'core/mixins';
 
 
 // Knihovny
-@import 'lib/mixins';
+// --------
+
 @import (less) 'node_modules/fancybox/source/jquery.fancybox.css';
 
-// Zakladna vzhledu
-@import 'core/base';
 
-// Komponenty
+// UI Komponenty
+// -------------
+
 @import 'ui/head';
 @import 'ui/foot';
 @import 'ui/form';
 @import 'ui/infobox';
 @import 'ui/nav';
 @import 'ui/polaroid';
+
+// Layout
+// ------
+
+@import 'layout/layout';
+
+// Vice o organizaci CSS:
+// http://www.vzhurudolu.cz/blog/29-organizace-css-2014

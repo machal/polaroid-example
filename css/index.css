@@ -1,3 +1,68 @@
+/*
+HTML zakladna
+=============
+*/
+a img {
+  border: 0;
+}
+body {
+  font: 16px/1.33 sans-serif;
+  font: 1rem/1.33 sans-serif;
+  background: #6d431f url('../img/wood.png') repeat;
+  color: #fff;
+  margin: 16px 16px 0 16px;
+  margin: 1rem 1rem 0 1rem;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 48px;
+  margin-bottom: 3rem;
+  margin-top: 0;
+}
+p {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 21.28px;
+  margin-bottom: 1.33rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #ccc;
+}
+table td,
+table th {
+  text-align: left;
+  font-weight: normal;
+  border-bottom: 1px solid #ccc;
+  padding: 8px 3.2px 8px 0;
+  padding: .5rem .2rem .5rem 0;
+}
+table th {
+  color: #999;
+}
+/*
+Helper tridy
+============
+*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+/*
+Mixiny
+======
+*/
 .clearfix {
   zoom: 1;
 }
@@ -8,11 +73,6 @@
 }
 .clearfix:after {
   clear: both;
-}
-.dumb_only {
-  position: absolute;
-  top: -200px;
-  left: -200px;
 }
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,
@@ -251,50 +311,19 @@
     /*The size of the normal image, half the size of the hi-res image*/
   }
 }
-a img {
-  border: 0;
-}
-body {
-  font: 16px/1.33 sans-serif;
-  font: 1rem/1.33 sans-serif;
-  background: #6d431f url('../img/wood.png') repeat;
-  color: #fff;
-  margin: 16px 16px 0 16px;
-  margin: 1rem 1rem 0 1rem;
-}
-h1 {
-  text-align: center;
-  margin-bottom: 48px;
-  margin-bottom: 3rem;
-  margin-top: 0;
-}
-p {
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 21.28px;
-  margin-bottom: 1.33rem;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-top: 1px solid #ccc;
-}
-table td,
-table th {
-  text-align: left;
-  font-weight: normal;
-  border-bottom: 1px solid #ccc;
-  padding: 8px 3.2px 8px 0;
-  padding: .5rem .2rem .5rem 0;
-}
-table th {
-  color: #999;
-}
+/*
+UI komponenta: Hlavicka
+=======================
+*/
 .head {
   padding: 32px 0;
   padding: 2rem 0;
   text-align: center;
 }
+/*
+UI komponenta: Paticka
+======================
+*/
 .foot {
   padding: 32px 0;
   padding: 2rem 0;
@@ -306,6 +335,10 @@ table th {
   margin-right: -16px;
   margin-right: -1rem;
 }
+/*
+UI komponenta: Formular
+=======================
+*/
 .form input[type=text],
 .form textarea {
   width: 100%;
@@ -313,6 +346,10 @@ table th {
   padding: .25rem;
   box-sizing: border-box;
 }
+/*
+UI komponenta: Informativni Box
+===============================
+*/
 .infobox {
   color: #000;
   background: #fff;
@@ -324,6 +361,10 @@ table th {
 .infobox h2 {
   margin-top: 0;
 }
+/*
+UI komponenta: Navigace
+=======================
+*/
 .nav {
   zoom: 1;
   margin-bottom: 24px;
@@ -363,6 +404,10 @@ table th {
   background: #ddd;
   background: rgba(255, 255, 255, 0.5);
 }
+/*
+UI komponenta: Polaroid fotka
+=============================
+*/
 .polaroids {
   zoom: 1;
   list-style-type: none;
@@ -377,40 +422,77 @@ table th {
 .polaroids:after {
   clear: both;
 }
+.polaroid {
+  float: left;
+  width: 25%;
+  height: 180px;
+  padding: 10px 2.5%;
+  margin: 0 2.5% 20px 0;
+  background-color: white;
+  color: darkgrey;
+}
 .polaroid a {
   color: #666;
   text-decoration: none;
 }
-.polaroid-head {
+.polaroid:hover,
+.polaroid:focus,
+.polaroid:active,
+.polaroid--active {
+  background-color: #fcf883;
+  background-color: #ffffff;
+}
+.polaroid:hover .polaroid__head,
+.polaroid:focus .polaroid__head,
+.polaroid:active .polaroid__head,
+.polaroid--active .polaroid__head {
+  color: black;
+}
+.polaroid:target {
+  background: yellow;
+}
+.polaroid__head {
   text-align: center;
   font: 16px/1.33 sans-serif;
   font: 1rem/1.33 sans-serif;
   font-weight: normal;
 }
-.polaroid {
-  float: left;
-  width: 170px;
-  height: 180px;
-  padding: 10px;
-  margin: 0 20px 20px 0;
-  background-color: white;
-  color: darkgrey;
-}
-.polaroid {
-  background-color: rgba(255, 255, 255, 0.7);
-}
-.polaroid:hover,
-.polaroid:focus,
-.polaroid:active {
-  background-color: #fcf883;
-  background-color: #ffffff;
-}
-.polaroid:hover .head,
-.polaroid:focus .head,
-.polaroid:active .head {
-  color: black;
-}
-.polaroid:target {
-  background: yellow;
+/*
+Layout stranky
+==============
+*/
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    zoom: 1;
+  }
+  .container:before,
+  .container:after {
+    content: "";
+    display: table;
+  }
+  .container:after {
+    clear: both;
+  }
+  .content-container {
+    zoom: 1;
+  }
+  .content-container:before,
+  .content-container:after {
+    content: "";
+    display: table;
+  }
+  .content-container:after {
+    clear: both;
+  }
+  .content {
+    width: 66%;
+    float: left;
+  }
+  .side {
+    width: 33%;
+    float: right;
+  }
 }
 /*# sourceMappingURL=index.css.map */
