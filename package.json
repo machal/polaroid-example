@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "jquery": "^1.12.4",
-    "fancybox": "git@github.com:fancyapps/fancyBox.git#master"
+    "fancybox": "https://github.com/fancyapps/fancyBox#master"
   }
 }
