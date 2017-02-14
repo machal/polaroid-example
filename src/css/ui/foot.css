@@ -4,10 +4,10 @@ UI komponenta: Paticka
 */
 
 .foot {
-	padding: calc(var(--fontSize) * 3)  0;
-	text-align: center;
-	margin-bottom: 0;
-	background: rgba(0,0,0,.5);
-	margin-left: calc(var(--fontSize) * -1);
-	margin-right: calc(var(--fontSize) * -1);
+  padding: calc(var(--fontSize) * 3)  0;
+  text-align: center;
+  margin-bottom: 0;
+  background: rgba(0, 0, 0, .5);
+  margin-left: calc(var(--fontSize) * -1);
+  margin-right: calc(var(--fontSize) * -1);
 }

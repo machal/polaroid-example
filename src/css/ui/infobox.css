@@ -4,12 +4,12 @@ UI komponenta: Informativni Box
 */
 
 .infobox {
-	color: #000;
-	background: #fff;
-	padding: calc(var(--fontSize) * 2);
-	margin-bottom: calc(var(--fontSize) * var(--lineHeight));
+  color: #000;
+  background: #fff;
+  padding: calc(var(--fontSize) * 2);
+  margin-bottom: calc(var(--fontSize) * var(--lineHeight));
 }
 
-.infobox	h2 {
-	margin-top: 0;
+.infobox h2 {
+  margin-top: 0;
 }

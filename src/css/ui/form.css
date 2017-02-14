@@ -3,9 +3,9 @@ UI komponenta: Formular
 =======================
 */
 
-.form	input[type=text],
-.form	textarea {
-	width: 100%;
-	padding: calc(var(--fontSize) * .25);
-	box-sizing: border-box;
+.form input[type=text],
+.form textarea {
+  width: 100%;
+  padding: calc(var(--fontSize) * .25);
+  box-sizing: border-box;
 }

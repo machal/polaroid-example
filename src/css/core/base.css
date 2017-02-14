@@ -3,17 +3,20 @@ HTML zakladna
 =============
 */
 
-/*--- Zakladna ---*/
+/*
+Zakladna
+--------
+*/
 
 a img {
   border: 0;
 }
 
 body {
-	font: var(--fontSize)/var(--lineHeight) sans-serif;
-	background: #6d431f url('../../img/wood.png') repeat;
-	color: #fff;
-	margin: var(--fontSize) var(--fontSize) 0 var(--fontSize);
+  font: var(--fontSize) / var(--lineHeight) sans-serif;
+  background: #6d431f url('../../img/wood.png') repeat;
+  color: #fff;
+  margin: var(--fontSize) var(--fontSize) 0 var(--fontSize);
 }
 
 h1 {
@@ -23,23 +26,23 @@ h1 {
 }
 
 p {
-	padding: 0;
-	margin-top: 0;
-	margin-bottom: calc(var(--fontSize) * var(--lineHeight));
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: calc(var(--fontSize) * var(--lineHeight));
 }
 
 table {
-	width: 100%;
-	border-collapse: collapse;
-	border-top: 1px solid #ccc;
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #ccc;
 }
 
 table td,
 table th {
-	text-align: left;
-	font-weight: normal;
-	border-bottom: 1px solid #ccc;
-	padding:
+  text-align: left;
+  font-weight: normal;
+  border-bottom: 1px solid #ccc;
+  padding:
     calc(var(--fontSize) * .5)
     calc(var(--fontSize) * .25)
     calc(var(--fontSize) * .5)
@@ -47,7 +50,7 @@ table th {
 }
 
 table th {
-	color: #999;
+  color: #999;
 }
 
 a {

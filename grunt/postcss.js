@@ -9,7 +9,11 @@ module.exports = {
     options: {
       map: true,
       processors: [
-        require('postcss-import'),
+        require("postcss-import")({
+              plugins: [
+                require("stylelint") // Kontrola jeste pred upravami
+              ]
+            }),
         require('postcss-cssnext')
       ]
     },
