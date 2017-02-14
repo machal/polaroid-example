@@ -4,6 +4,6 @@ UI komponenta: Hlavicka
 */
 
 .head {
-	padding: 2rem 0;
+	padding: calc(var(--fontSize) * 2) 0;
 	text-align: center;
 }

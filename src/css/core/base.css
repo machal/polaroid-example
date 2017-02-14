@@ -10,22 +10,22 @@ a img {
 }
 
 body {
-	font: 1rem/1.33 sans-serif;
+	font: var(--fontSize)/var(--lineHeight) sans-serif;
 	background: #6d431f url('../../img/wood.png') repeat;
 	color: #fff;
-	margin: 1rem 1rem 0 1rem;
+	margin: var(--fontSize) var(--fontSize) 0 var(--fontSize);
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: calc(var(--fontSize) * 3);
   margin-top: 0;
 }
 
 p {
 	padding: 0;
 	margin-top: 0;
-	margin-bottom: 1.33rem;
+	margin-bottom: calc(var(--fontSize) * var(--lineHeight));
 }
 
 table {
@@ -39,10 +39,17 @@ table th {
 	text-align: left;
 	font-weight: normal;
 	border-bottom: 1px solid #ccc;
-	padding: .5rem .2rem .5rem 0;
+	padding:
+    calc(var(--fontSize) * .5)
+    calc(var(--fontSize) * .25)
+    calc(var(--fontSize) * .5)
+    0;
 }
-
 
 table th {
 	color: #999;
+}
+
+a {
+  color: var(--colorPrimary);
 }

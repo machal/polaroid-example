@@ -1,5 +1,6 @@
 /* Zakladna */
 
+@import 'core/variables';
 @import 'core/base';
 @import 'core/helpers';
 

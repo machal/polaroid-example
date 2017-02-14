@@ -4,7 +4,7 @@ UI komponenta: Navigace
 */
 
 .nav {
-	margin-bottom: 1.5rem;
+	margin-bottom: calc(var(--fontSize) * 1.5);
 	border-bottom: 1px solid #fff;
 	text-align: center;
 }
@@ -25,7 +25,9 @@ UI komponenta: Navigace
 .nav_item b {
 	font-weight: normal;
 	display: inline-block;
-	padding: .5rem 1rem;
+	padding:
+    calc(var(--fontSize) * .5)
+    var(--fontSize);
 	text-align: center;
 	color: #333;
 	background: #fff;

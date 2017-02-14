@@ -6,6 +6,6 @@ UI komponenta: Formular
 .form	input[type=text],
 .form	textarea {
 	width: 100%;
-	padding: .25rem;
+	padding: calc(var(--fontSize) * .25);
 	box-sizing: border-box;
 }
