@@ -1,0 +1,48 @@
+/*
+HTML zakladna
+=============
+*/
+
+/*--- Zakladna ---*/
+
+a img {
+  border: 0;
+}
+
+body {
+	font: 1rem/1.33 sans-serif;
+	background: #6d431f url('../../img/wood.png') repeat;
+	color: #fff;
+	margin: 1rem 1rem 0 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 0;
+}
+
+p {
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 1.33rem;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-top: 1px solid #ccc;
+}
+
+table td,
+table th {
+	text-align: left;
+	font-weight: normal;
+	border-bottom: 1px solid #ccc;
+	padding: .5rem .2rem .5rem 0;
+}
+
+
+table th {
+	color: #999;
+}

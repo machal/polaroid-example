@@ -1,0 +1,38 @@
+/*
+UI komponenta: Navigace
+=======================
+*/
+
+.nav {
+	margin-bottom: 1.5rem;
+	border-bottom: 1px solid #fff;
+	text-align: center;
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/*Polozka navigace*/
+
+.nav_item {
+	margin: 0;
+	display: inline-block;
+}
+.nav_item a,
+.nav_item b {
+	font-weight: normal;
+	display: inline-block;
+	padding: .5rem 1rem;
+	text-align: center;
+	color: #333;
+	background: #fff;
+	text-decoration: none;
+}
+
+.nav_item	b {
+	background: #ddd;
+	background: rgba(255, 255, 255, .5);
+}

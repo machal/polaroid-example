@@ -1,0 +1,13 @@
+/*
+UI komponenta: Paticka
+======================
+*/
+
+.foot {
+	padding: 2rem 0;
+	text-align: center;
+	margin-bottom: 0;
+	background: rgba(0,0,0,.5);
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
