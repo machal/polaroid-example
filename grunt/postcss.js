@@ -10,8 +10,12 @@ module.exports = {
       map: true,
       processors: [
         require('postcss-import'),
-        require('pixrem')({rootValue: 16}), // rem -> px fallback
-        require('autoprefixer')({browsers: 'last 2 versions'}), // pridani prefixu
+        require('postcss-cssnext')(
+          {
+            browsers: 'last 2 versions',
+            rootValue: 16
+          }
+        )
       ]
     },
     src: 'src/css/index.css',
