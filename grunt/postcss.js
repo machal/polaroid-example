@@ -10,12 +10,7 @@ module.exports = {
       map: true,
       processors: [
         require('postcss-import'),
-        require('postcss-cssnext')(
-          {
-            browsers: 'last 2 versions',
-            rootValue: 16
-          }
-        )
+        require('postcss-cssnext')
       ]
     },
     src: 'src/css/index.css',

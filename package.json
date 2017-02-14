@@ -37,7 +37,6 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "IE9",
-    "IE8"
+    "IE 8-9"
   ]
 }
