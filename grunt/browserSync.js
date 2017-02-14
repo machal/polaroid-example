@@ -13,7 +13,7 @@ module.exports = {
   dev: {
       bsFiles: {
           src : [
-            'css/*.css'
+            'dist/css/*.css'
           ]
       },
       options: {

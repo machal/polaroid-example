@@ -8,11 +8,11 @@
 module.exports = {
 
   less: {
-    files: 'less/**/*.less',
+    files: 'src/less/**/*.less',
     tasks: ['css']
   },
   js: {
-    files: 'js/**/*.js',
+    files: 'src/js/**/*.js',
     tasks: ['js']
   }
 

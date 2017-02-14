@@ -13,7 +13,7 @@ module.exports = {
     ]
   },
   dist: {
-    src: 'css/index.css'
+    src: 'dist/css/index.css'
   }
 
 }; // module.exports
