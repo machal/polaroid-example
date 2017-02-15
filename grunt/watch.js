@@ -9,6 +9,10 @@ module.exports = {
 
   less: {
     files: 'src/less/**/*.less',
+    tasks: ['less']
+  },
+  css: {
+    files: 'src/css/**/*.css',
     tasks: ['css']
   },
   js: {

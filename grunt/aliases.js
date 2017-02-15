@@ -2,12 +2,13 @@
 
 module.exports = {
 
-  // grunt css
+  // grunt less
   less: [
     'less',
     'postcss:post'
   ],
 
+  // grunt css
   css: [
     'postcss:default'
   ],
