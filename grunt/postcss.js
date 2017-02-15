@@ -9,12 +9,15 @@ module.exports = {
     options: {
       map: true,
       processors: [
-        require("postcss-import")({
+        require("postcss-easy-import")({
               plugins: [
                 require("stylelint") // Kontrola jeste pred upravami
               ]
             }),
-        require('postcss-cssnext')
+        require('postcss-custom-properties'),
+        require('postcss-calc'),
+        require('autoprefixer'),
+        require('pixrem')
       ]
     },
     src: 'src/css/index.css',
