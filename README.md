@@ -7,12 +7,14 @@ http://www.vzhurudolu.cz/kurzy/webovy-frontend
 
 ## Struktura stylů
 
-* `src/less/index.less` – index stylů
-* `src/less/core/` – základy pro CSS: mixiny, pomocné třídy…
-* `src/less/ui/` –  komponenty uživatelského rozhraní
-* `src/less/layout/` –  rozložení stránky
+* `src/css/index.css` – index stylů
+* `src/css/core/` – základy pro CSS: pomocné třídy…
+* `src/css/ui/` –  komponenty uživatelského rozhraní
+* `src/css/layout/` –  rozložení stránky
 
-Kompilujeme pomocí Grunt.js do `css/index.css`.
+Kompilujeme pomocí Grunt.js a PostCSS zpracování do `css/index.css`.
+
+Alternativně jsou v adresáři `src/less` dostupné i zdroje pro LESS preprocesor.
 
 
 ## Javascript
@@ -28,7 +30,7 @@ Vývojářské ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](htt
 
 ## Sestavování pomocí Grunt.js
 
-Důležité tásky:
+Důležité úlohy:
 
 * `grunt` - spustí vše a nastartuje vývojový server, otevře prohlížeč s nastartovanou synchronizací a pustí hlídání změn
 * Pro jednotlivé typy assetů se může hodit `grunt img`, `grunt css`, `grunt js`.
