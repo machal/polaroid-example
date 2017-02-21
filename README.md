@@ -47,10 +47,13 @@ Pak tento konkrétní projekt:
 # naklonování projektu
 git clone https://github.com/machal/polaroid-example.git
 
+# skok do adresáře
+cd polaroid-example
+
 # instalace závislostí
 npm install
 
-# spuštění hlavního Grunt tasku
+# spuštění Gruntu
 grunt
 ```
 
