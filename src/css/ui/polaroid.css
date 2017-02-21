@@ -49,8 +49,6 @@ Fotka
 .polaroid:active,
 .polaroid--active {
   background-color: #fcf883;
-  background-color: rgba(100%, 100%, 100%, 1);
-  transform: scale(1.5);
 }
 
 .polaroid:hover .polaroid__head,
