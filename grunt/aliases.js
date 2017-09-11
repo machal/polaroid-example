@@ -10,7 +10,7 @@ module.exports = {
 
   // grunt css
   css: [
-    'postcss:default'
+    'less'
   ],
 
   // grunt js
