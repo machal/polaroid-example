@@ -10,7 +10,7 @@ module.exports = {
     files: [
       {
         expand: true,
-        cwd: 'node_modules/fancybox/source/',
+        cwd: 'node_modules/fancybox/dist/img/',
         src: ['*.gif','*.png'],
         dest: 'dist/css/'
       }
