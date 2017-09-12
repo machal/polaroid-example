@@ -8,11 +8,6 @@ module.exports = {
     'postcss:post'
   ],
 
-  // grunt stylelint
-  stylelint: [
-    'postcss:stylelint'
-  ],
-
   // grunt js
   js: [
     'uglify'

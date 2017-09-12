@@ -34,17 +34,6 @@ module.exports = {
     },
     src: 'dist/css/index.css',
     dest: 'dist/css/index.css'
-  },
-
-  stylelint: {
-    options: {
-      map: true,
-      processors: [
-        require('stylelint')
-      ]
-    },
-    src: 'dist/css/index.css',
-    dest: 'dist/css/index.css'
   }
 
 }; // module.exports
