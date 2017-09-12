@@ -4,6 +4,43 @@ http://www.vzhurudolu.cz/kurzy/webovy-frontend
 
 **Autor:** Martin Michálek, martin@vzhurudolu.cz
 
+## Instalace projektu
+
+Nejprve si musíte nainstalovat [NPM a celý Node.js ekosystém](http://www.vzhurudolu.cz/prirucka/node-instalace).
+
+Pak tento konkrétní projekt:
+
+```bash
+# instalace Gruntu (pokud nemáte)
+npm install -g grunt-cli
+
+# naklonování projektu
+git clone https://github.com/machal/polaroid-example.git
+
+# skok do adresáře
+cd polaroid-example
+
+# instalace závislostí
+npm install
+
+# spuštění Gruntu - otevře okno prohlížeče s projektem
+grunt
+```
+
+## Závislosti řešíme pomocí NPM
+
+Vývojářské ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](http://www.vzhurudolu.cz/prirucka/grunt-pluginy) i uživatelské závislosti (jQuery a jeho pluginy) spravujeme pomocí https://www.npmjs.com/. Viz konfigurák [package.json](./package.json).
+
+
+## Sestavování pomocí Grunt.js
+
+Důležité úlohy:
+
+* `grunt` - spustí vše a nastartuje vývojový server, otevře prohlížeč s nastartovanou synchronizací a pustí hlídání změn
+* Pro jednotlivé typy assetů se může hodit `grunt img`, `grunt css`, `grunt js`.
+
+Viz [Gruntfile.js](./Gruntfile.js).
+
 
 ## Struktura stylů
 
@@ -23,39 +60,9 @@ Alternativně jsou v adresáři `src/less` dostupné i zdroje pro LESS preproces
 * `js/script.min.js` – výsledný Grunt.js kompilát
 
 
-## Závislosti řešíme pomocí NPM
-
-Vývojářské ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](http://www.vzhurudolu.cz/prirucka/grunt-pluginy) i uživatelské závislosti (jQuery a jeho pluginy) spravujeme pomocí https://www.npmjs.com/. Viz konfigurák [package.json](./package.json).
 
 
-## Sestavování pomocí Grunt.js
 
-Důležité úlohy:
-
-* `grunt` - spustí vše a nastartuje vývojový server, otevře prohlížeč s nastartovanou synchronizací a pustí hlídání změn
-* Pro jednotlivé typy assetů se může hodit `grunt img`, `grunt css`, `grunt js`.
-
-Viz [Gruntfile.js](./Gruntfile.js).
-
-## Instalace projektu
-
-Nejprve si musíte nainstalovat [NPM a celý Node.js ekosystém](http://www.vzhurudolu.cz/prirucka/node-instalace).
-
-Pak tento konkrétní projekt:
-
-```bash
-# naklonování projektu
-git clone https://github.com/machal/polaroid-example.git
-
-# skok do adresáře
-cd polaroid-example
-
-# instalace závislostí
-npm install
-
-# spuštění Gruntu
-grunt
-```
 
 ## Zdroje fotek
 
