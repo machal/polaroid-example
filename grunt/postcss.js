@@ -32,9 +32,19 @@ module.exports = {
         require('autoprefixer')({browsers: 'last 2 versions'}), // pridani prefixu
       ]
     },
-    dist: {
-      src: 'dist/css/index.css'
-    }
+    src: 'dist/css/index.css',
+    dest: 'dist/css/index.css'
+  },
+
+  stylelint: {
+    options: {
+      map: true,
+      processors: [
+        require('stylelint')
+      ]
+    },
+    src: 'dist/css/index.css',
+    dest: 'dist/css/index.css'
   }
 
 }; // module.exports
