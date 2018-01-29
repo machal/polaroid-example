@@ -12,7 +12,7 @@ module.exports = {
         expand: true,
         cwd: 'node_modules/fancybox/dist/img/',
         src: ['*.gif','*.png'],
-        dest: 'dist/css/'
+        dest: 'dist/img/'
       }
     ]
   }
