@@ -37,7 +37,6 @@
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions",
-    "IE 8-9"
+    "last 2 versions"
   ]
 }

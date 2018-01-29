@@ -1,6 +1,8 @@
 // PostCSS
 // -------
 
+// autoprefixer - pridani prefixu podle browserlist z package.json
+
 'use strict';
 
 module.exports = {
@@ -9,7 +11,7 @@ module.exports = {
     options: {
       map: true,
       processors: [
-        require('autoprefixer')({browsers: 'last 2 versions'}), // pridani prefixu
+        require('autoprefixer'),
       ]
     },
     src: 'dist/css/index.css',
