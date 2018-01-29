@@ -11,10 +11,6 @@ module.exports = {
     files: 'src/less/**/*.less',
     tasks: ['less']
   },
-  css: {
-    files: 'src/css/**/*.css',
-    tasks: ['css']
-  },
   js: {
     files: 'src/js/**/*.js',
     tasks: ['js']

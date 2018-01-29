@@ -11,7 +11,10 @@ module.exports = function (grunt) {
 
   require('time-grunt')(grunt);
 
-  require('load-grunt-config')(grunt, { config: options });
+  require('load-grunt-config')(grunt, {
+    config: options,
+    jitGrunt: true
+  });
 
   // See the `grunt/` directory for individual task configurations.
 };
