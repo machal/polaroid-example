@@ -6,23 +6,19 @@ a img {
   border: 0;
 }
 body {
-  font: 16px/1.33 sans-serif;
   font: 1rem/1.33 sans-serif;
   background: #6d431f url('../../img/wood.png') repeat;
   color: #fff;
-  margin: 16px 16px 0 16px;
   margin: 1rem 1rem 0 1rem;
 }
 h1 {
   text-align: center;
-  margin-bottom: 48px;
   margin-bottom: 3rem;
   margin-top: 0;
 }
 p {
   padding: 0;
   margin-top: 0;
-  margin-bottom: 21.28px;
   margin-bottom: 1.33rem;
 }
 table {
@@ -35,7 +31,6 @@ table th {
   text-align: left;
   font-weight: normal;
   border-bottom: 1px solid #ccc;
-  padding: 8px 3.2px 8px 0;
   padding: .5rem .2rem .5rem 0;
 }
 table th {
@@ -316,7 +311,6 @@ UI komponenta: Hlavicka
 =======================
 */
 .head {
-  padding: 32px 0;
   padding: 2rem 0;
   text-align: center;
 }
@@ -325,14 +319,11 @@ UI komponenta: Paticka
 ======================
 */
 .foot {
-  padding: 32px 0;
   padding: 2rem 0;
   text-align: center;
   margin-bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  margin-left: -16px;
   margin-left: -1rem;
-  margin-right: -16px;
   margin-right: -1rem;
 }
 /*
@@ -342,7 +333,6 @@ UI komponenta: Formular
 .form input[type=text],
 .form textarea {
   width: 100%;
-  padding: 4px;
   padding: .25rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -354,9 +344,7 @@ UI komponenta: Informativni Box
 .infobox {
   color: #000;
   background: #fff;
-  padding: 12px;
   padding: .75rem;
-  margin-bottom: 21.28px;
   margin-bottom: 1.33rem;
 }
 .infobox h2 {
@@ -368,7 +356,6 @@ UI komponenta: Navigace
 */
 .nav {
   zoom: 1;
-  margin-bottom: 24px;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #fff;
   text-align: center;
@@ -394,7 +381,6 @@ UI komponenta: Navigace
 .nav_item b {
   font-weight: normal;
   display: inline-block;
-  padding: 8px 16px;
   padding: .5rem 1rem;
   text-align: center;
   color: #333;
@@ -454,7 +440,6 @@ UI komponenta: Polaroid fotka
 }
 .polaroid__head {
   text-align: center;
-  font: 16px/1.33 sans-serif;
   font: 1rem/1.33 sans-serif;
   font-weight: normal;
 }
