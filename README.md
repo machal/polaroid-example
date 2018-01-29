@@ -1,6 +1,6 @@
-# Příklad ke školení Dnešní webový frontend
+# Příklad ke školení Dnešní webová kodéřina
 
-http://www.vzhurudolu.cz/kurzy/webovy-frontend
+https://www.vzhurudolu.cz/kurzy/webova-koderina
 
 **Autor:** Martin Michálek, martin@vzhurudolu.cz
 
@@ -29,7 +29,7 @@ grunt
 
 ## Závislosti řešíme pomocí NPM
 
-Vývojářské ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](http://www.vzhurudolu.cz/prirucka/grunt-pluginy) i uživatelské závislosti (jQuery a jeho pluginy) spravujeme pomocí https://www.npmjs.com/. Viz konfigurák [package.json](./package.json).
+Vývojářské ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](http://www.vzhurudolu.cz/prirucka/grunt-pluginy) i uživatelské závislosti (jQuery a jeho pluginy) spravujeme pomocí [NPM](https://www.npmjs.com/). Viz konfigurák [package.json](./package.json).
 
 
 ## Sestavování pomocí Grunt.js
@@ -39,19 +39,17 @@ Důležité úlohy:
 * `grunt` - spustí vše a nastartuje vývojový server, otevře prohlížeč s nastartovanou synchronizací a pustí hlídání změn
 * Pro jednotlivé typy assetů se může hodit `grunt img`, `grunt css`, `grunt js`.
 
-Viz [Gruntfile.js](./Gruntfile.js).
+Konfigurace je v [Gruntfile.js](./Gruntfile.js) a složce `grunt/`.
 
 
 ## Struktura stylů
 
-* `src/css/index.css` – index stylů
+* `src/css/index.less` – index stylů
 * `src/css/core/` – základy pro CSS: pomocné třídy…
 * `src/css/ui/` –  komponenty uživatelského rozhraní
 * `src/css/layout/` –  rozložení stránky
 
-Kompilujeme pomocí Grunt.js a PostCSS zpracování do `css/index.css`.
-
-Alternativně jsou v adresáři `src/less` dostupné i zdroje pro LESS preprocesor.
+Kompilujeme pomocí Grunt.js a PostCSS. Výsledkem je soubor `css/index.css`.
 
 
 ## Javascript
@@ -60,7 +58,7 @@ Alternativně jsou v adresáři `src/less` dostupné i zdroje pro LESS preproces
 * `js/script.min.js` – výsledný Grunt.js kompilát
 
 
-
+---
 
 
 
