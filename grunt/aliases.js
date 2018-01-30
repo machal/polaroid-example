@@ -8,16 +8,10 @@ module.exports = {
     'postcss'
   ],
 
-  // grunt js
-  js: [
-    'uglify'
-  ],
-
   // grunt
   default: [
     'copy',
     'css',
-    'js',
     'browserSync',
     'watch'
   ],

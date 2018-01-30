@@ -37,7 +37,7 @@ Vývojářské ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](htt
 Důležité úlohy:
 
 * `grunt` - spustí vše a nastartuje vývojový server, otevře prohlížeč s nastartovanou synchronizací a pustí hlídání změn
-* Pro jednotlivé typy assetů se může hodit `grunt img`, `grunt css`, `grunt js`.
+* Pro jednotlivé typy assetů se může hodit `grunt img`, `grunt css`.
 
 Konfigurace je v [Gruntfile.js](./Gruntfile.js) a složce `grunt/`.
 

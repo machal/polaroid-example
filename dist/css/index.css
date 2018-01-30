@@ -331,6 +331,11 @@ UI komponenta: Formular
 =======================
 */
 .form input[type=text],
+.form input[type=email],
+.form input[type=tel],
+.form input[type=url],
+.form input[type=number],
+.form input[type=search],
 .form textarea {
   width: 100%;
   padding: .25rem;
