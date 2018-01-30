@@ -6,6 +6,25 @@
 
 module.exports = {
 
+  jquery_js: {
+    files: [
+      {
+        src: 'node_modules/jquery/dist/jquery.js',
+        dest: 'src/js/jquery.js'
+      }
+    ]
+  },
+
+  fancybox_js: {
+    files: [
+      {
+        src: 'node_modules/fancybox/dist/js/jquery.fancybox.js',
+        dest: 'src/js/jquery.fancybox.js'
+      }
+    ]
+  },
+
+
   fancybox_img: {
     files: [
       {
@@ -15,6 +34,7 @@ module.exports = {
         dest: 'dist/img/'
       }
     ]
-  }
+  },
+
 
 };
