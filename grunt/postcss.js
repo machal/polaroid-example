@@ -11,7 +11,7 @@ module.exports = {
     options: {
       map: true,
       processors: [
-        require('autoprefixer'),
+        require('autoprefixer')({ grid: true })
       ]
     },
     src: 'dist/css/index.css',
