@@ -100,6 +100,8 @@ Mixiny
   background: #f9f9f9;
   color: #444;
   text-shadow: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
 }
 .fancybox-opened {
@@ -107,6 +109,7 @@ Mixiny
 }
 .fancybox-opened .fancybox-skin {
   -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 .fancybox-outer,
@@ -269,6 +272,8 @@ Mixiny
   background: transparent;
   /* Fallback for web browsers that doesn't support RGBa */
   background: rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
   border-radius: 15px;
   text-shadow: 0 1px 2px #222;
   color: #FFF;
@@ -342,8 +347,7 @@ UI komponenta: Formular
 .form textarea {
   width: 100%;
   padding: .25rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 /*
 UI komponenta: Informativni Box
@@ -404,25 +408,12 @@ UI komponenta: Polaroid fotka
 =============================
 */
 .polaroids {
-  zoom: 1;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.polaroids:before,
-.polaroids:after {
-  content: "";
-  display: table;
-}
-.polaroids:after {
-  clear: both;
-}
 .polaroid {
-  float: left;
-  width: 25%;
-  height: 180px;
-  padding: 10px 2.5%;
-  margin: 0 2.5% 20px 0;
+  text-align: center;
   background-color: white;
   color: darkgrey;
 }
@@ -450,6 +441,40 @@ UI komponenta: Polaroid fotka
   text-align: center;
   font: 1rem/1.33 sans-serif;
   font-weight: normal;
+}
+.polaroids {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.polaroid {
+  box-sizing: border-box;
+  padding: 1em;
+  width: calc(49%);
+  min-width: 10em;
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 600px) {
+  .polaroid {
+    width: calc(31.33%);
+  }
+}
+@supports (display: grid) {
+  .polaroids {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: 1em;
+  }
+  .polaroid {
+    margin: 0;
+    width: auto;
+  }
+  @media screen and (min-width: 600px) {
+    .polaroids {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
 }
 /*
 Layout stranky
