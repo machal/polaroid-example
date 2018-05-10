@@ -100,8 +100,6 @@ Mixiny
   background: #f9f9f9;
   color: #444;
   text-shadow: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
 }
 .fancybox-opened {
@@ -109,7 +107,6 @@ Mixiny
 }
 .fancybox-opened .fancybox-skin {
   -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 .fancybox-outer,
@@ -272,8 +269,6 @@ Mixiny
   background: transparent;
   /* Fallback for web browsers that doesn't support RGBa */
   background: rgba(0, 0, 0, 0.8);
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
   border-radius: 15px;
   text-shadow: 0 1px 2px #222;
   color: #FFF;
@@ -347,7 +342,8 @@ UI komponenta: Formular
 .form textarea {
   width: 100%;
   padding: .25rem;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*
 UI komponenta: Informativni Box
@@ -443,12 +439,18 @@ UI komponenta: Polaroid fotka
   font-weight: normal;
 }
 .polaroids {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .polaroid {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 1em;
   width: calc(49%);
   min-width: 10em;
@@ -461,8 +463,10 @@ UI komponenta: Polaroid fotka
 }
 @supports (display: grid) {
   .polaroids {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
     margin-bottom: 1em;
   }
@@ -472,7 +476,8 @@ UI komponenta: Polaroid fotka
   }
   @media screen and (min-width: 600px) {
     .polaroids {
-      grid-template-columns: 1fr 1fr 1fr;
+      -ms-grid-columns: 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }
