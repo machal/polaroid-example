@@ -26,6 +26,8 @@ var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 var flexbugs = require('postcss-flexbugs-fixes');
 var pixrem = require('pixrem');
+// prejmenovani souboru
+var rename = require('gulp-rename');
 
 
 // postCSS pluginy a nastavení
@@ -33,7 +35,7 @@ var postcssPlugins = [
     flexbugs(),
     pixrem(),
     autoprefixer( { browsers: [ 'last 5 versions', 'ie >= 9', 'ios >= 7', 'android >= 4.4' ] }),
-    cssnano()
+    // cssnano()
 ];
 
 // výpis chybových hlášek
@@ -60,9 +62,8 @@ gulp.task('less', function() {
     .pipe(plumber({ errorHandler: onError }))
     .pipe(sourcemaps.init())
     .pipe(less())
-    .pipe(sourcemaps.write('../' + settings.css.target))
+    .pipe(sourcemaps.write())
     .pipe(postcss(postcssPlugins))
-    .pipe(rename(settings.css.filename))
     .pipe(gulp.dest(settings.css.target))
     .pipe(browsersync.reload({ stream: true }));
 });
