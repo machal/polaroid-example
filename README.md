@@ -8,12 +8,17 @@ https://www.vzhurudolu.cz/kurzy/webova-koderina
 
 Nejprve si musíte nainstalovat [Git](https://git-scm.com/downloads) a [Node.js s NPM](https://www.vzhurudolu.cz/prirucka/node-instalace).
 
-Pak tento konkrétní projekt:
+Pak Grunt (pokud nemáte):
 
 ```bash
-# instalace Gruntu (pokud nemáte)
 npm install -g grunt-cli
+```
 
+Nainstaluje to rozhraní Gruntu pro příkazovou řádku (`grunt-cli`) globálně pro všechny projekty na počítači (`-g`).
+
+Pak instalujte tento konkrétní projekt:
+
+```bash
 # naklonování projektu
 git clone https://github.com/machal/polaroid-example.git
 
@@ -57,10 +62,24 @@ Kompilujeme pomocí Grunt.js a PostCSS. Výsledkem je soubor `css/index.css`.
 * `js/index.js` – zdroj
 * `js/script.min.js` – výsledný Grunt.js kompilát
 
-
 ---
 
+## Alternativní workflow: Gulp
 
+```bash
+# instalace Gulpu (pokud nemáte)
+npm install gulp-cli -g
+```
+
+Nainstaluje to rozhraní Gulpu pro příkazovou řádku (`gulp-cli`) globálně pro všechny projekty na počítači (`-g`).
+
+Důležité úlohy:
+
+* `gulp` - spustí vše a nastartuje vývojový server, otevře prohlížeč s nastartovanou synchronizací a pustí hlídání změn
+
+Konfigurace je v [gulpfile.js](./gulpfile.js).
+
+---
 
 ## Zdroje fotek
 
