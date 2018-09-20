@@ -46,7 +46,7 @@
     "last 2 versions"
   ],
   "scripts": {
-    "less": "lessc src/less/index.less dist/css/index.css",
+    "less": "lessc --source-map src/less/index.less dist/css/index.css",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*"
   }
 }
