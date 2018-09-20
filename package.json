@@ -31,6 +31,8 @@
     "jit-grunt": "^0.10.0",
     "less": "^3.8.1",
     "load-grunt-config": "^0.19.2",
+    "onchange": "^4.1.0",
+    "parallelshell": "^3.0.2",
     "pixrem": "^4.0.1",
     "postcss": "^7.0.2",
     "postcss-cli": "^6.0.0",
@@ -46,8 +48,13 @@
     "last 4 versions"
   ],
   "scripts": {
+    "browsersync": "browser-sync start --server --files 'dist/css/*.css, dist/js/*.js'",
     "less": "lessc --source-map src/less/index.less dist/css/index.css",
     "autoprefixer": "postcss -u autoprefixer --grid=true -r dist/css/index.css",
-    "css": "npm run less && npm run autoprefixer"
+    "css": "npm run less && npm run autoprefixer",
+    "watch:css": "onchange 'src/less/*.less' -- npm run css",
+    "watch:js": "",
+    "watch:all": "parallelshell 'npm run watch:css' 'npm run watch:js'",
+    "serve": "npm run css && npm run browsersync && npm watch:all"
   }
 }
