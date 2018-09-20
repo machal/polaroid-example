@@ -43,10 +43,11 @@
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 4 versions"
   ],
   "scripts": {
     "less": "lessc --source-map src/less/index.less dist/css/index.css",
-    "autoprefixer": "postcss -u autoprefixer -r dist/css/*"
+    "autoprefixer": "postcss -u autoprefixer --grid=true -r dist/css/index.css",
+    "css": "npm run less && npm run autoprefixer"
   }
 }
