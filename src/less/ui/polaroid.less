@@ -8,7 +8,6 @@ UI komponenta: Polaroid fotka
 // ------------
 
 .polaroids {
-	.clearfix;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -21,8 +20,6 @@ UI komponenta: Polaroid fotka
 // ### Zakladna
 
 .polaroid {
-  float: left;
-  width: 25%;
   height: 180px;
   padding: 10px 2.5%;
   margin: 0 2.5% 20px 0;
@@ -67,3 +64,55 @@ UI komponenta: Polaroid fotka
   font-weight: normal;
 }
 
+// Flexbox layout
+
+.polaroids {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.polaroid {
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 0 1em 0;
+  width: calc(50% - 0.5em);
+  height: auto;
+}
+
+@media only screen and (min-width: 600px) {
+  .polaroid {
+    width: calc(33.3% - 2em/3);
+  }
+}
+
+// Reseni pro prohlizece s Gridem
+
+@supports (display: grid) {
+
+  // Reset Flexboxu
+  .polaroid {
+    width: auto;
+    margin: 0;
+  }
+
+  // Grid layout
+  .polaroids {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+  }
+
+  // @media only screen and (min-width: 600px) {
+  //   .polaroids {
+  //     grid-template-columns: repeat(3, 1fr);
+  //   }
+  // }
+
+  // Grid layout bez MQ
+
+  .polaroids {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+}
