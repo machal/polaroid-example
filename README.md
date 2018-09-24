@@ -8,14 +8,6 @@ https://www.vzhurudolu.cz/kurzy/webova-koderina
 
 Nejprve si musíte nainstalovat [Git](https://git-scm.com/downloads) a [Node.js s NPM](https://www.vzhurudolu.cz/prirucka/node-instalace).
 
-Pak Grunt (pokud nemáte):
-
-```bash
-npm install -g grunt-cli
-```
-
-Nainstaluje to rozhraní Gruntu pro příkazovou řádku (`grunt-cli`) globálně pro všechny projekty na počítači (`-g`).
-
 Pak instalujte tento konkrétní projekt:
 
 ```bash
@@ -28,24 +20,32 @@ cd polaroid-example
 # instalace závislostí
 npm install
 
-# spuštění Gruntu - otevře okno prohlížeče s projektem
-grunt
+# spuštění s pomocí npx - otevře okno prohlížeče s projektem
+npx grunt
 ```
 
 ## Závislosti řešíme pomocí NPM
 
 Vývojářské ([Grunt](https://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](https://www.vzhurudolu.cz/prirucka/grunt-pluginy)) i uživatelské závislosti (jQuery a jeho pluginy) spravujeme pomocí [NPM](https://www.npmjs.com/). Viz konfigurák [package.json](./package.json).
 
-
 ## Sestavování pomocí Grunt.js
 
 Důležité úlohy:
 
-* `grunt` - spustí vše a nastartuje vývojový server, otevře prohlížeč s nastartovanou synchronizací a pustí hlídání změn
-* Pro jednotlivé typy assetů se může hodit `grunt img`, `grunt css`.
+- Spustit: `npx grunt` (Spustí vše a nastartuje vývojový server, otevře prohlížeč s nastartovanou synchronizací a pustí hlídání změn.)
+- Konfigurace: [Gruntfile.js](./Gruntfile.js)
 
-Konfigurace je v [Gruntfile.js](./Gruntfile.js) a složce `grunt/`.
+## Alternativní workflow
 
+Pomocí NPM skriptů:
+
+- Spustit: `npm start`
+- Konfigurace: [package.js](./package.js) („scripts“)
+
+Pomocí Gulp.js:
+
+- Spustit: `npx gulp`
+- Konfigurace: [gulpfile.js](./gulpfile.js)
 
 ## Struktura stylů
 
@@ -61,23 +61,6 @@ Kompilujeme pomocí Grunt.js a PostCSS. Výsledkem je soubor `css/index.css`.
 
 * `js/index.js` – zdroj
 * `js/script.min.js` – výsledný Grunt.js kompilát
-
----
-
-## Alternativní workflow: Gulp
-
-```bash
-# instalace Gulpu (pokud nemáte)
-npm install gulp-cli -g
-```
-
-Nainstaluje to rozhraní Gulpu pro příkazovou řádku (`gulp-cli`) globálně pro všechny projekty na počítači (`-g`).
-
-Důležité úlohy:
-
-* `gulp` - spustí vše a nastartuje vývojový server, otevře prohlížeč s nastartovanou synchronizací a pustí hlídání změn
-
-Konfigurace je v [gulpfile.js](./gulpfile.js).
 
 ---
 
