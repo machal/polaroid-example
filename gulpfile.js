@@ -23,19 +23,13 @@ var less = require('gulp-less');
 // postCSS - postprocessing CSS (minifikace, autoprefixer...)
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
-var cssnano = require('cssnano');
-var flexbugs = require('postcss-flexbugs-fixes');
-var pixrem = require('pixrem');
 // prejmenovani souboru
 var rename = require('gulp-rename');
 
 
 // postCSS pluginy a nastavení
 var postcssPlugins = [
-    flexbugs(),
-    pixrem(),
-    autoprefixer( { browsers: [ 'last 5 versions', 'ie >= 9', 'ios >= 7', 'android >= 4.4' ] }),
-    // cssnano()
+    autoprefixer()
 ];
 
 // výpis chybových hlášek
