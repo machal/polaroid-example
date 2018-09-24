@@ -50,7 +50,7 @@ gulp.task('browsersync-reload', function () {
     browsersync.reload();
 });
 
-// SASS kompilace
+// LESS kompilace
 gulp.task('less', function() {
   return gulp.src(settings.css.source)
     .pipe(plumber({ errorHandler: onError }))
