@@ -626,34 +626,30 @@ Layout stranky
   .container {
     max-width: 1000px;
     margin: 0 auto;
-    zoom: 1;
-  }
-  .container:before,
-  .container:after {
-    content: "";
-    display: table;
-  }
-  .container:after {
-    clear: both;
   }
   .content-container {
-    zoom: 1;
-  }
-  .content-container:before,
-  .content-container:after {
-    content: "";
-    display: table;
-  }
-  .content-container:after {
-    clear: both;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 66.6% 2rem 33.3%;
+    grid-template-columns: 66.6% 33.3%;
+        grid-template-areas: "main side";
+    grid-gap: 2rem;
   }
   .content {
-    width: 66%;
-    float: left;
+    grid-area: main;
   }
   .side {
-    width: 33%;
-    float: right;
+    grid-area: side;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .side {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
   }
 }
 /*# sourceMappingURL=index.css.map */

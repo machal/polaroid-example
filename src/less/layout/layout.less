@@ -8,21 +8,36 @@ Layout stranky
   .container {
   	max-width: 1000px;
   	margin: 0 auto;
-  	.clearfix;
+  	// .clearfix;
   }
 
+  // .content-container {
+  //   .clearfix;
+  // }
+
+  // .content {
+  // 	width: 66%;
+  // 	float: left;
+  // }
+
+  // .side {
+  // 	width: 33%;
+  // 	float: right;
+  // }
+
   .content-container {
-    .clearfix;
+    display: grid;
+    grid-template-columns: 66.6% 33.3%;
+    grid-template-areas: "main side";
+    grid-gap: 2rem;
   }
 
   .content {
-  	width: 66%;
-  	float: left;
+    grid-area: main;
   }
 
   .side {
-  	width: 33%;
-  	float: right;
+    grid-area: side;
   }
 
 } // @media …
