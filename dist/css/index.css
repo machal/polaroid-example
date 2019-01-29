@@ -363,6 +363,20 @@ UI komponenta: Formular
   border-radius: 3px;
   box-shadow: inset -3px -3px 5px rgba(0, 0, 0, 0.25);
 }
+.form__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form__label {
+  width: 100px;
+  flex: none;
+}
+.form__input {
+  flex: auto;
+}
+.form__row--submit {
+  margin-left: 100px;
+}
 /*
 UI komponenta: Informativni Box
 ===============================
