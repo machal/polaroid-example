@@ -93,5 +93,14 @@ UI komponenta: Polaroid fotka
 .polaroids {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
   grid-gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .polaroids {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(8, auto);
+    grid-gap: 1rem;
+  }
 }
