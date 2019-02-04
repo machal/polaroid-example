@@ -44,11 +44,11 @@
     "last 4 versions"
   ],
   "scripts": {
-    "browsersync": "browser-sync start --server --files 'dist/css/*.css, dist/js/*.js'",
+    "browsersync": "browser-sync start --server --files \"dist/css/*.css, dist/js/*.js\"",
     "less": "lessc --source-map src/less/index.less dist/css/index.css",
     "autoprefixer": "postcss -u autoprefixer --grid=true -r dist/css/index.css",
     "build:css": "run-s less autoprefixer",
-    "watch:css": "onchange 'src/less/*.less' -- run-s build:css",
+    "watch:css": "onchange \"src/less/*.less\" -- run-s build:css",
     "watch": "run-p browsersync watch:*",
     "start": "run-s build:* watch"
   }
