@@ -463,25 +463,33 @@ UI komponenta: Polaroid fotka
   font-weight: normal;
 }
 .polaroids {
-  zoom: 1;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.polaroids:before,
-.polaroids:after {
-  content: "";
-  display: table;
+.polaroid {
+  padding: 10px 2.5%;
 }
-.polaroids:after {
-  clear: both;
+.polaroids {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .polaroid {
-  float: left;
-  width: 25%;
-  height: 180px;
-  padding: 10px 2.5%;
-  margin: 0 2.5% 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: calc(50% - (1rem / 3));
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 400px) {
+  .polaroid {
+    width: calc(33.33333333% - (2rem / 3));
+  }
 }
 /*
 Layout stranky
