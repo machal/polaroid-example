@@ -420,26 +420,7 @@ UI komponenta: Navigace
 UI komponenta: Polaroid fotka
 =============================
 */
-.polaroids {
-  zoom: 1;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.polaroids:before,
-.polaroids:after {
-  content: "";
-  display: table;
-}
-.polaroids:after {
-  clear: both;
-}
 .polaroid {
-  float: left;
-  width: 25%;
-  height: 180px;
-  padding: 10px 2.5%;
-  margin: 0 2.5% 20px 0;
   background-color: white;
   color: darkgrey;
 }
@@ -467,6 +448,27 @@ UI komponenta: Polaroid fotka
   text-align: center;
   font: 1rem/1.33 sans-serif;
   font-weight: normal;
+}
+.polaroids {
+  zoom: 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.polaroids:before,
+.polaroids:after {
+  content: "";
+  display: table;
+}
+.polaroids:after {
+  clear: both;
+}
+.polaroid {
+  float: left;
+  width: 25%;
+  height: 180px;
+  padding: 10px 2.5%;
+  margin: 0 2.5% 20px 0;
 }
 /*
 Layout stranky

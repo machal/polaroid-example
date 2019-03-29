@@ -4,28 +4,12 @@ UI komponenta: Polaroid fotka
 */
 
 
-// Seznam fotek
-// ------------
-
-.polaroids {
-	.clearfix;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-
 // Fotka
 // -----
 
 // ### Zakladna
 
 .polaroid {
-  float: left;
-  width: 25%;
-  height: 180px;
-  padding: 10px 2.5%;
-  margin: 0 2.5% 20px 0;
   background-color: white;
   color: darkgrey;
 
@@ -67,3 +51,20 @@ UI komponenta: Polaroid fotka
   font-weight: normal;
 }
 
+// Layout (old-school)
+// -------------------
+
+.polaroids {
+	.clearfix;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.polaroid {
+  float: left;
+  width: 25%;
+  height: 180px;
+  padding: 10px 2.5%;
+  margin: 0 2.5% 20px 0;
+}
