@@ -5,24 +5,39 @@ Layout stranky
 
 @media only screen and (min-width: 768px) {
 
-  .container {
-  	max-width: 1000px;
-  	margin: 0 auto;
-  	.clearfix;
-  }
+  // .container {
+  // 	max-width: 1000px;
+  // 	margin: 0 auto;
+  // 	.clearfix;
+  // }
+
+  // .content-container {
+  //   .clearfix;
+  // }
+
+  // .content {
+  // 	width: 66%;
+  // 	float: left;
+  // }
+
+  // .side {
+  // 	width: 33%;
+  // 	float: right;
+  // }
 
   .content-container {
-    .clearfix;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 1rem;
+    grid-template-areas: "content side";
   }
 
   .content {
-  	width: 66%;
-  	float: left;
+    grid-area: content;
   }
 
   .side {
-  	width: 33%;
-  	float: right;
+    grid-area: side;
   }
 
 } // @media …
