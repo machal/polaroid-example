@@ -81,6 +81,14 @@ module.exports = function (grunt) {
       }
     },
 
+    uglify: {
+      my_target: {
+        files: {
+          'dist/js/script.min.js': ['src/js/jquery.js', 'src/js/jquery.fancybox.js', 'src/js/jquery.fancybox.js']
+        }
+      }
+    },
+
     watch: {
       less: {
         files: 'src/less/**/*.less',
@@ -95,6 +103,7 @@ module.exports = function (grunt) {
   });
 
   // Aliasy pro tasky
+  grunt.registerTask('js', ['uglify']);
   grunt.registerTask('css', ['less', 'postcss']);
   grunt.registerTask('default', ['copy', 'css', 'browserSync', 'watch']);
 };
