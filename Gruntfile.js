@@ -59,7 +59,7 @@ module.exports = function (grunt) {
         options: {
           map: true,
           processors: [
-            require('autoprefixer')({ grid: true })
+            require('autoprefixer')({ grid: 'autoplace' })
           ]
         },
         src: 'dist/css/index.css',

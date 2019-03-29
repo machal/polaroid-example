@@ -93,3 +93,25 @@ UI komponenta: Polaroid fotka
   }
 
 }
+
+// @supports (display: grid) {
+
+.polaroids {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-gap: 1rem;
+}
+
+@media screen and (min-width: 400px) {
+  .polaroids {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+  }
+}
+
+.polaroid {
+  width: auto;
+}
+
+// }
