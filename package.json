@@ -13,7 +13,7 @@
   ],
   "devDependencies": {
     "autoprefixer": "^9.5.1",
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.27.10",
     "grunt": "^1.0.4",
     "grunt-browser-sync": "^2.0.0",
     "grunt-contrib-concat": "^1.0.0",
